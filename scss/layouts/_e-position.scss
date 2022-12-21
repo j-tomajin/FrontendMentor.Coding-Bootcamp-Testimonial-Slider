@@ -1,3 +1,16 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 /* POSITION */
+
+/* MAIN */
+.slider {
+    position: relative;
+
+    &__group {
+        position: absolute;
+    }
+
+    &__button {
+        position: absolute;
+    }
+}
