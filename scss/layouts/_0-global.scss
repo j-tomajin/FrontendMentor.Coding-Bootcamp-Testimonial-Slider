@@ -1,3 +1,21 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 @use '../utils/fonts' as font;
+
+.inter-light {
+    font-family: font.$inter;
+    font-weight: 300;
+    color: var(--clr-primary-400);
+}
+
+.inter-semi-bold {
+    font-family: font.$inter;
+    font-weight: 500;
+    color: var(--clr-primary-200);
+}
+
+.inter-heading {
+    font-family: font.$inter;
+    font-weight: 700;
+    color: var(--clr-primary-400);
+}
