@@ -7,27 +7,70 @@
 
   <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
   
-  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <title>Coding Bootcamp Testimonials Slider</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./dist/style.css">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- JAVASCRIPT -->
+  <script src="./js/app.js" defer></script>
 </head>
 <body>
   <!-- MAIN CONTENT -->
   <main class="main">
-    <article class="main__container">
-      
+    <article class="main__container main__display">
+
+      <div class="slider">
+        <div class="slider__groups">
+        
+          <div class="group slider__group" data-index="0" data-status="active">
+            <div class="img">
+              <img src="./images/image-tanya.jpg" alt="profile picture">
+            </div>
+            <div class="slider__content">
+              <p class="inter-light">
+                “ I've been interested in coding for a while but never taken the jump, until now. 
+                I couldn't recommend this course enough. I'm now in the job of my dreams and so 
+                excited about the future. ”
+              </p>
+              <div class="name inter-heading">
+                Tanya Sinclair
+                <span class="inter-semi-bold">UX Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="group slider__group" data-index="1" data-status="unknown">
+            <div class="img">
+              <img src="./images/image-john.jpg" alt="profile picture">
+            </div>
+            <div class="slider__content">
+              <p class="inter-light">
+                “ If you want to lay the best foundation possible I'd recommend taking this course. 
+                The depth the instructors go into is incredible. I now feel so confident about 
+                starting up as a professional developer. ”
+              </p>
+              <div class="name inter-heading">
+                John Tarkpor
+                <span class="inter-semi-bold">Junior Front-end Developer</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="slider__button">
+          <button type="button" onclick="prevSlider()">s</button>
+          <button type="button" onclick="nextSlider()">a</button>
+        </div>
+      </div>
     </article>
-    “ I've been interested in coding for a while but never taken the jump, until now. 
-    I couldn't recommend this course enough. I'm now in the job of my dreams and so 
-    excited about the future. ”
-  
-    Tanya Sinclair
-    UX Engineer
-  
-    “ If you want to lay the best foundation possible I'd recommend taking this course. 
-    The depth the instructors go into is incredible. I now feel so confident about 
-    starting up as a professional developer. ”
-  
-    John Tarkpor
-    Junior Front-end Developer
   </main>
   
   <!-- FOOTER CONTENT -->
