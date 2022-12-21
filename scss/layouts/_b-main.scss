@@ -1,3 +1,58 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 /* MAIN */
+
+.main {
+    width: 100%;
+
+    &__container {
+        width: min(calc(100% - 48px), f.rem(1210));
+        margin-inline: auto;
+        text-align: center;
+    }
+}
+
+.slider {
+    
+    &__group {
+        width: 100%;
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.65rem + 1.50vw, 2rem);
+        margin-inline: auto;
+        transition: 0.4s cubic-bezier(.17,.67,.33,.93);
+        
+        .img {
+            margin-inline: auto;
+            max-width: f.rem(540);
+        }
+    }
+    
+    &__content {
+        margin-inline: auto;
+        background-color: whitesmoke;
+        padding: 1em;
+        max-width: f.rem(630);
+
+        p {
+            margin-bottom: f.rem(16);
+        }
+    }
+}
+
+.slider__group[data-status='unknown'] {
+    transform: scale(0);
+}
+
+.slider__group[data-status='after'] {
+    transform: translateX(50%) scale(0);
+    transition: none;
+}
+
+.slider__group[data-status='before'] {
+    transform: translateX(-50%) scale(0);
+    transition: none;
+}
+
+.slider__group[data-status='active'] {
+    transition-delay: 50ms;
+}
