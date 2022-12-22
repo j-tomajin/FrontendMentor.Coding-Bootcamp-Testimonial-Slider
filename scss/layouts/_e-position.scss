@@ -15,7 +15,12 @@
 
             position: absolute;
             top: 0;
-            right: 0;
+            right: 10px;
+
+            @include bp.breakpointMin(large-screen) {
+                top: -30px;
+                right: 50px;
+            }
         }
     }
 }
