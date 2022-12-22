@@ -8,16 +8,17 @@ const prevSlider = () => {
     const activeGroup = document.querySelector(`[data-index="${activeIndex}"]`),
           beforeGroup = document.querySelector(`[data-index="${active}"]`)
 
+    // set the current active into before to move it to the right
     activeGroup.dataset.status = 'before'
 
+    // set the unknown data status to 'after' after a short timeout then...
     beforeGroup.dataset.status = 'after'
+
     setTimeout(() => {
+        // set the after to active for smooth transition
         beforeGroup.dataset.status = 'active'
         activeIndex = active
     })
-
-    activeIndex = active
-    console.log(active)
 }
 
 const nextSlider = () => {
@@ -26,13 +27,15 @@ const nextSlider = () => {
     const activeGroup = document.querySelector(`[data-index="${activeIndex}"]`),
           nextGroup = document.querySelector(`[data-index="${active}"]`)
 
+    // set the current active into before to move it to the left
     activeGroup.dataset.status = 'after'
 
+    // set the unknown data status to 'before' and then after a short timeout 
     nextGroup.dataset.status = 'before'
+
     setTimeout(() => {
+        // set the after into active for smooth transition
         nextGroup.dataset.status = 'active'
         activeIndex = active
     })
-
-    console.log(active)
 }
