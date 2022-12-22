@@ -24,6 +24,11 @@
         .img {
             margin-inline: auto;
             max-width: f.rem(540);
+            border-radius: f.rem(5);
+
+            img {
+                border-radius: inherit;
+            }
         }
     }
     
