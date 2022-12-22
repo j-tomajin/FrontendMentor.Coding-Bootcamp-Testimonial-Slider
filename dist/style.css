@@ -130,6 +130,10 @@ body {
 .slider__group .img {
   margin-inline: auto;
   max-width: 33.75rem;
+  border-radius: 0.3125rem;
+}
+.slider__group .img img {
+  border-radius: inherit;
 }
 .slider__content {
   margin-inline: auto;
@@ -234,7 +238,13 @@ body {
   width: clamp(25rem, -17.41rem + 142.86vw, 46.875rem);
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
+}
+@media (min-width: 57.5em) {
+  .main__position .bg {
+    top: -30px;
+    right: 50px;
+  }
 }
 
 .slider__group {
