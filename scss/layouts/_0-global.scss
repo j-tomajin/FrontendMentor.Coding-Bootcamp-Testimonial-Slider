@@ -2,6 +2,18 @@
 @use '../utils/functions' as f;
 @use '../utils/fonts' as font;
 
+body {
+    display: grid;
+    place-items: center;
+    // padding-top: f.rem(100);
+
+    /* BACKGROUND IMAGE */
+    background-image: url('../images/pattern-curve.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
 .inter-light {
     font-family: font.$inter;
     font-weight: 300;
