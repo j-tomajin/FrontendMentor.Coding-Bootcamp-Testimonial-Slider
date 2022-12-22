@@ -23,7 +23,12 @@
 <body>
   <!-- MAIN CONTENT -->
   <main class="main">
-    <article class="main__container main__display">
+
+    <article class="main__container main__display main__position">
+
+      <div class="bg">
+        <img src="./images/pattern-bg.svg" alt="">
+      </div>
 
       <div class="slider">
         <div class="slider__groups">
@@ -31,6 +36,14 @@
           <div class="group slider__group" data-index="0" data-status="active">
             <div class="img">
               <img src="./images/image-tanya.jpg" alt="profile picture">
+              <div class="slider__button">
+                <button type="button" onclick="prevSlider()">
+                  <img src="./images/icon-prev.svg" alt="previous slide">
+                </button>
+                <button type="button" onclick="nextSlider()">
+                  <img src="./images/icon-next.svg" alt="next slide">
+                </button>
+              </div>
             </div>
             <div class="slider__content">
               <p class="inter-light">
@@ -48,6 +61,14 @@
           <div class="group slider__group" data-index="1" data-status="unknown">
             <div class="img">
               <img src="./images/image-john.jpg" alt="profile picture">
+              <div class="slider__button">
+                <button type="button" onclick="prevSlider()">
+                  <img src="./images/icon-prev.svg" alt="previous slide">
+                </button>
+                <button type="button" onclick="nextSlider()">
+                  <img src="./images/icon-next.svg" alt="next slide">
+                </button>
+              </div>
             </div>
             <div class="slider__content">
               <p class="inter-light">
@@ -62,12 +83,6 @@
             </div>
           </div>
 
-
-        </div>
-
-        <div class="slider__button">
-          <button type="button" onclick="prevSlider()">s</button>
-          <button type="button" onclick="nextSlider()">a</button>
         </div>
       </div>
     </article>
@@ -75,9 +90,9 @@
   
   <!-- FOOTER CONTENT -->
   <footer>
-    <div class="attribution">
+    <div class="attribution inter-heading">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Jeck</a>.
+      Coded by <a href="https://github.com/j-tomajin">Jeck</a>.
     </div>
   </footer>
 </body>
