@@ -13,7 +13,7 @@
 }
 
 .slider {
-    
+
     &__group {
         width: 100%;
         font-size: 1rem;
@@ -29,12 +29,50 @@
     
     &__content {
         margin-inline: auto;
-        background-color: whitesmoke;
         padding: 1em;
-        max-width: f.rem(630);
+        max-width: f.rem(800);
 
         p {
             margin-bottom: f.rem(16);
+        }
+
+        .name {
+            font-size: 1rem;
+            font-size: clamp(1rem, 0.47rem + 1.8vw, 1.5rem);
+        }
+
+        background-image: url('../images/pattern-quotes.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-position-x: 100px;
+    }
+
+    &__button {
+        background-color: white;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: .5em;
+
+        button {
+            background-color: transparent;
+        }
+    }
+
+    @include bp.breakpointMin(large-screen) {
+        text-align: left;
+        height: 540px;
+
+        &__group {
+
+            .img {
+                margin-inline: 0;   
+                margin-inline-start: auto;
+
+            }
+        }
+
+        &__content {
+            padding-block: f.rem(64);
         }
     }
 }
